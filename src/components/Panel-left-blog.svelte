@@ -31,7 +31,7 @@
   }
 </style>
 
-<div class='panel-left content-border m-0'>            
+<div class='panel-left content-border'>            
     <div class="top-content text-center">
         <div class="bg-plomo-0 p-20" style="margin-top: -15px; line-height: 1.5;">
             <p class="fw-600 m-0" style="line-height: 1.4;">Software espcializado para negocios gastronómicos.</p>
