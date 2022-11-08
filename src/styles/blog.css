@@ -311,3 +311,13 @@ body {
         display: block;
     }
   }
+
+@media (max-width: 750px) {
+    .content-post {
+        width: 100% !important;
+    }
+    .post-details {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

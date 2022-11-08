@@ -77,7 +77,7 @@
 </style>
 <!-- svelte-ignore empty-block -->
 {#if isLoadingData}
-    <div out:fly="{{ x: -200, duration: 90 }}">
+    <div>
         <LoaderPage />
     </div>
 {:else}

@@ -1,7 +1,12 @@
 <script lang="ts">
     import logoHeader from '$root/images/logo-white.png'    
-
 </script>
+<style>
+    * {
+    font-family: 'Nunito', sans-serif
+  }
+
+</style>
 <div>    
     <div class="header-content bg-gradiant text-white" style="contain: content;">                
         <div class="details">
