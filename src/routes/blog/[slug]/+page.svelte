@@ -32,6 +32,7 @@
     }) 
 
     async function loadDataPost() {
+        linkPage = $page.params.slug
         if (linkPage) {
             isLoadingData = true;            
             
@@ -44,6 +45,7 @@
 
             // postStorage sino trae todos los datos
             const _url = postStorage ? `byLink/${linkPage}` : `byLinkAll/${linkPage}`
+            console.log(_url);
             
             data = await getData('blog',_url) 
             if (!data || data.length === 0)  {
