@@ -51,8 +51,8 @@
                 return;
             }       
 
-            data = data[0]
-            data = {...postStorage, content: data.content}
+            postStorage = postStorage ? postStorage : data[0]
+            data = {...postStorage, content: data[0].content}
 
             listTags = data.tags.split(',')
             categoria = data.categoria.descripcion
