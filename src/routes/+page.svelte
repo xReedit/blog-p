@@ -20,6 +20,7 @@
     
     import { page } from '$app/stores';
 
+
     onMount(async () => {
         if ( $page.url.pathname === 'main' ) {            
             goto(`./main`)            
