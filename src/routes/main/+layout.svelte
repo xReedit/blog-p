@@ -27,6 +27,7 @@
             <li><a href="/main/usuarios/list">Usuarios</a></li>
             <li><a href="/main/tag/list">Tags</a></li>
             <li><a href="/main/publicaciones/list">Publicaciones</a></li>
+            <li><a href="/main/changelogs/list">Changelogs</a></li>
           </ul>
         </div>
         <!-- nav-bar -->

@@ -12,6 +12,13 @@
 	box-sizing: border-box;
 }
 
+* {
+	scrollbar-width: thin;
+	/* "auto" or "thin" */
+	scrollbar-color: #bdbdbd #cdcdcd3b;
+	/* scroll thumb and track */
+}
+
 :root {
 	--font-serif: 'Nunito', sans-serif;	
 	--font-16: 1.6rem;

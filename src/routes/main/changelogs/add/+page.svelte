@@ -6,24 +6,32 @@
     import { goto } from '$app/navigation';
     import { page } from '$app/stores'
 
-    let nom_cliente = ''
-    let nick_cliente = ''
-    let pass_cliente = ''
+    let nom_categoria = ''
     let isNewRegister = true
     let id: string
-    const eventController = 'usuario'
+    let rowItem: any = {
+        titulo: '',
+        descripcion: '',
+        route: '',
+        body: ''
+    }
+    let body = 'aaaa'
+
+    const eventController = 'changelog'
 
     onMount(async () => {
         id = $page.url.searchParams.get('id')
         if (id) {
             // load data categoria
             const data = await getData(eventController,`byId/${id}`)
+            console.log('data', data);
             if ( !data[0] ) return
             
             isNewRegister = false;
-            nom_cliente = data[0].nombre            
-            nick_cliente = data[0].nick
-            pass_cliente = data[0].pass || ''
+            nom_categoria = data[0].descripcion            
+            rowItem = data[0]
+
+            body = rowItem.body
         }
     })
 
@@ -59,20 +67,28 @@
         on:submit|preventDefault={handleSubmit}>
         <input 
             class="input-flat"
-            name="nombre"
-            placeholder="Nombre"
-            value={nom_cliente}>
+            name="titulo"
+            placeholder="Titulo"
+            value={rowItem.titulo}>
         <input 
             class="input-flat"
-            name="nick"
-            placeholder="usuario"
-            value={nick_cliente}>
+            name="descripcion"
+            placeholder="Descripcion"
+            value={rowItem.descripcion}>
         <input 
-            type="password"
             class="input-flat"
-            name="pass"
-            placeholder="Password"
-            value={pass_cliente}>
+            name="route"
+            placeholder="Route"
+            value={rowItem.route}>
+        <br><br>
+        <textarea 
+            class="input-flat"
+            name="body"
+            placeholder="Body"
+            rows="20"
+            cols="90"
+            bind:value={body}
+            ></textarea>
         <br><br>
         <button type="submit" class="btn btn-sm btn-dark">
             <i class="fa fa-save"></i> 
